@@ -1,11 +1,16 @@
 class Car < ApplicationRecord
-  belongs_to :user
-  has_many :bookings
+  self.table_name = "turbo_cars"
+  belongs_to :user, foreign_key: "turbo_user_id"
+  has_many :bookings, foreign_key: "turbo_car_id"
   has_many_attached :photos
   validates :brand, presence: true
   validates :model, presence: true
   validates :year, presence: true
   validates :rate, presence: true
+
+  def user_id
+    turbo_user_id
+  end
 
   include PgSearch::Model
 
