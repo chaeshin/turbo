@@ -74,7 +74,7 @@ doc = Nokogiri::HTML.parse(html) # create a nokogiri doc based on that html
 urls = []
 urls_elements = doc.search(".comp-lm51gzru.FubTgk a")
 p urls_elements.count
-urls_elements.first(19).each do |element|
+urls_elements.first(34).each do |element|
   urls << element.attribute("href").value
 end
 
@@ -122,6 +122,7 @@ urls.each do |url|
     index += 1
   end
   car.save
+  car.destroy if car.photos < 5
   image_urls = []
 end
 

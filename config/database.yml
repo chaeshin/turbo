@@ -21,8 +21,9 @@ default: &default
 
 development:
   <<: *default
-  database: one_db_heroku_development
+  database: car_rental_development
 
+  # one_db_heroku_development
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
