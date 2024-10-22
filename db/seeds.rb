@@ -74,7 +74,7 @@ doc = Nokogiri::HTML.parse(html) # create a nokogiri doc based on that html
 urls = []
 urls_elements = doc.search(".comp-lm51gzru.FubTgk a")
 p urls_elements.count
-urls_elements.first(29).each do |element|
+urls_elements.first(35).each do |element|
   urls << element.attribute("href").value
 end
 
@@ -114,7 +114,7 @@ urls.each do |url|
   image_urls.each do |link|
     p link
     begin
-     p file = URI.open(link) # open the html of the page
+    p file = URI.open(link) # open the html of the page
     rescue OpenURI::HTTPError
       next
     end
@@ -122,7 +122,7 @@ urls.each do |url|
     index += 1
   end
   car.save
-  car.destroy if car.photos < 5
+  car.destroy if car.photos.count < 5
   image_urls = []
 end
 

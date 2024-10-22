@@ -84,3 +84,5 @@ gem "faker"
 gem "cloudinary"
 gem "nokogiri"
 gem "ffi", "< 1.17.0"
+
+gem 'seed_dump'
