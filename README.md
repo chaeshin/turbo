@@ -1,6 +1,6 @@
 ## Turbo - Rent your dream car today!
 
-App home: [Turbo - Rent your dream car today!](https://car-rental-1715-bba1fbc9061d.herokuapp.com)
+App home: [Turbo - Rent your dream car today!](https://turbo-car-rental-24ec29a2c9e5.herokuapp.com/)
 <br><br>
 Turbo is a car rental app that allows you to rent super cars in Japan.
 
